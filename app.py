@@ -42,6 +42,12 @@ def add_receipt():
         ''', (tenant_name, room_number, amount, due_date))
         conn.commit()
         conn.close()
-        return redirect('/ind
+        return redirect('/index')  # ✅ แก้ให้สมบูรณ์จาก /ind
+
+    return render_template('add_receipt.html')
+
+# สำหรับรันในเครื่อง
+if __name__ == '__main__':
+    app.run(debug=True)
 
 
