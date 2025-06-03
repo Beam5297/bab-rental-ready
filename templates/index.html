@@ -2,10 +2,17 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <title>ระบบห้องเช่า</title>
 </head>
 <body>
-  <h1>เข้าสู่ระบบ</h1>
-  <p>หน้านี้คือหน้าล็อกอิน</p>
+
+  <h1>สวัสดี {{ session['username'] }}</h1>
+  <p>ระบบออนไลน์พร้อมใช้งานแล้ว ✅</p>
+
+  <a href="/logout" style="color: red; position: absolute; top: 20px; right: 20px;">
+    ออกจากระบบ
+  </a>
+
 </body>
 </html>
+
