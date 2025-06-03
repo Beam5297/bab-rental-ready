@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>ระบบห้องเช่า</title>
+  <meta charset="UTF-8">
+  <title>ระบบห้องเช่า</title>
 </head>
 <body>
+  <h1>สวัสดี {{ session['username'] }}</h1>
+  <p>ระบบออนไลน์พร้อมใช้งานแล้ว ✅</p>
 
-    <h1>สวัสดี {{ session['username'] }}</h1>
-    <p>ระบบออนไลน์พร้อมใช้งานแล้ว ✅</p>
-
-    <a href="/logout" style="color: red; position: absolute; top: 20px; right: 20px;">
-        ออกจากระบบ
-    </a>
-
+  <a href="/logout" style="color: red; position: absolute; top: 20px; right: 20px;">
+    ออกจากระบบ
+  </a>
 </body>
 </html>
