@@ -49,5 +49,8 @@ def add_receipt():
 # สำหรับรันในเครื่อง
 if __name__ == '__main__':
     app.run(debug=True)
+@app.route('/')
+def index():
+    return 'ระบบห้องเช่า BAB พร้อมใช้งานแล้ว!'
 
 
