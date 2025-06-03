@@ -52,5 +52,3 @@ if __name__ == '__main__':
 @app.route('/')
 def index():
     return 'ระบบห้องเช่า BAB พร้อมใช้งานแล้ว!'
-
-
