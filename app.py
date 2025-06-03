@@ -1,3 +1,22 @@
+import sqlite3
+
+def init_db():
+    conn = sqlite3.connect('rent_receipts.db')
+    c = conn.cursor()
+    c.execute('''
+        CREATE TABLE IF NOT EXISTS receipts (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            tenant_name TEXT,
+            room_number TEXT,
+            amount REAL,
+            due_date TEXT
+        )
+    ''')
+    conn.commit()
+    conn.close()
+
+# เรียกใช้เมื่อเริ่มแอป
+init_db()
 @app.route('/add_receipt', methods=['GET', 'POST'])
 def add_receipt():
     if 'username' not in session or session.get('role') != 'admin':
